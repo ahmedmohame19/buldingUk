@@ -1,0 +1,30 @@
+@use "../../helpers/helpers.scss" as *;
+nav {
+    // position: fixed;
+    // top: 0;
+    width: 100%;
+    border-bottom: 2px solid $BaseColor;
+    background: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        width: 200px;
+        img {
+            width: 100%;
+        }
+    }
+    ul {
+        margin-right: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+        li {
+            padding: 10px;
+            list-style: none;
+        }
+    }
+}
