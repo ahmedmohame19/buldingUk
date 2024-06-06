@@ -1,25 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from "../../compnents/Navbar/Navbar.jsx"
-
+import Intro from '../../compnents/Intro/Intro.jsx'
 import "./Home.scss"
 
 export default function Home() {
+    const [Scrolled, setScrolled] = useState(false);
+
     return (
         <>
-            <Navbar />
-            <div className="landing">
-                <div className="back-image">
-                    <div className="text">
-                        <span>TRUSTED HANDYMAN SERVICES</span>
-                        <h2>
-                            Trusted & Reliable
-                            <br />
-                            Handyman Services
-                        </h2>
-                    </div>
-
-                </div>
-            </div>
+            <Navbar Scrolled={Scrolled} setScrolled={setScrolled} />
+            <Intro />
         </>
 
     )

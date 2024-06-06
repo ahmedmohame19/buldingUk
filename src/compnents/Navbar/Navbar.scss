@@ -1,30 +1,138 @@
 @use "../../helpers/helpers.scss" as *;
-nav {
-    // position: fixed;
-    // top: 0;
-    width: 100%;
-    border-bottom: 2px solid $BaseColor;
-    background: white;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    span {
-        width: 200px;
-        img {
-            width: 100%;
+nav {
+    width: 100%;
+    height: 150px;
+    // border-bottom: solid $BaseColor 1px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    @include Animtation(0.3s, ease-out, all);
+    background-color: transparent !important;
+
+    .Links {
+        height: 100%;
+
+        @include Breakpoints(small) {
+            display: none !important;
+        }
+
+        @include Breakpoints(mobile) {
+            display: none !important
         }
     }
-    ul {
-        margin-right: 120px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 25px;
-        li {
-            padding: 10px;
-            list-style: none;
+
+    &.Scrolling {
+        @include Scrolled();
+    }
+
+    button {
+        background-color: white !important;
+        display: none;
+
+        &:focus {
+            box-shadow: 0 0 0 $BaseColor !important;
+
+        }
+
+        @include Breakpoints(small) {
+            display: block;
+        }
+
+        @include Breakpoints(mobile) {
+            display: block;
+        }
+    }
+
+    @include Breakpoints(small) {
+        height: 90px;
+    }
+
+    @include Breakpoints(mobile) {
+        height: 90px;
+    }
+
+    .collapse {
+        height: 100%;
+    }
+
+    .offcanvas {
+        p {
+            cursor: pointer;
+            color: $BaseColor !important;
+            font-weight: bold !important;
+            margin-left: 20px;
+
+            &.ActiveLink {
+                &::after {
+                    border-color: $BaseColor;
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    border-color: $BaseColor;
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0%;
+                border: solid transparent 0.1px;
+                @include Animtation(0.2s, linear, all);
+            }
+        }
+
+        img {
+            filter: none;
+        }
+    }
+
+    img {
+        width: 200px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        margin-bottom: 15px;
+
+        @include Breakpoints(small) {
+            width: 200px;
+        }
+
+        @include Breakpoints(mobile) {
+            width: 200px;
+        }
+    }
+
+    p {
+        cursor: pointer;
+        // color: $BaseColor;
+        font-weight: bold !important;
+        margin-left: 20px;
+        color: white !important;
+
+        &.ActiveLink {
+            &::after {
+                border-color: white;
+                width: 100%;
+            }
+        }
+
+        &:hover {
+            &::after {
+                border-color: white;
+                width: 100%;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0%;
+            border: solid transparent 0.1px;
+            @include Animtation(0.2s, linear, all);
         }
     }
 }

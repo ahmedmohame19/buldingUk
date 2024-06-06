@@ -3,15 +3,21 @@
         @media (max-width: 767px) {
             @content;
         }
-    } @else if $point ==small {
+    }
+
+    @else if $point ==small {
         @media (min-width: 768px) and (max-width: 991px) {
             @content;
         }
-    } @else if $point ==medium {
+    }
+
+    @else if $point ==medium {
         @media (min-width: 992px) and (max-width: 1199px) {
             @content;
         }
-    } @else if $point ==large {
+    }
+
+    @else if $point ==large {
         @media (min-width: 1200px) {
             @content;
         }
@@ -43,4 +49,38 @@ $SecondColor: #d1e8df;
 
 .font-color {
     color: $BaseColor;
+}
+
+@mixin Scrolled() {
+    height: 100px;
+    width: 80%;
+    top: 20px;
+    left: calc(20%/2);
+    border-radius: 50px;
+    background-color: white !important;
+    border: solid $BaseColor 1px;
+    @include Animtation(0.3s, ease-out, all);
+
+    p {
+        padding-top: 20px;
+        color: $BaseColor !important;
+
+        &.ActiveLink {
+            &::after {
+                border-color: $BaseColor;
+            }
+        }
+
+        &:hover {
+            &::after {
+                border-color: $BaseColor;
+            }
+        }
+    }
+
+    img {
+        margin-bottom: 15px;
+        filter: none !important;
+        width: 150px;
+    }
 }
