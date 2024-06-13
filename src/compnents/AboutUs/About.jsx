@@ -22,24 +22,6 @@ export default function About() {
                 <p>“We received the best services we could hope for!”</p>
             </div>
         </section>
-        <div className="About_Titles d-flex flex-wrap align-items-start justify-content-between container">
-            <Card Title='Demolitions' Desc="Our demolition services are with precision, safety, and efficiency. We 
-            utilize advanced techniques and equipment to ensure the seamless removal of structures, preparing sites
-            for new developments. Our experienced team prioritizes environmental responsibility and regulatory compliance,
-             delivering results that pave the way for future construction projects." />
-
-            <Card Title='Renovations' Desc='our renovation services blend creativity, craftsmanship,
-              and attention to detail. We specialize in transforming spaces to meet the evolving needs
-              and tastes of our clients, whether it’s a modern update or a complete overhaul. Our experienced
-              team works closely with clients to deliver high-quality renovations that enhance both functionality
-              and aesthetic appeal, ensuring each project exceeds expectations.'/>
-
-            <Card Title='Maintenance' Desc="We offer comprehensive maintenance services designed to
-              keep your properties in optimal condition. Our skilled team provides regular inspections,
-              timely repairs, and preventative care to ensure the longevity and safety of your buildings.
-              With a commitment to reliability and excellence, we help clients maintain their investments
-              and minimize the need for costly future renovations."/>
-        </div>
 
     </>
 }
