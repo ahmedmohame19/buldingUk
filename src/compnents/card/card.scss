@@ -1,0 +1,15 @@
+@use '../../helpers/helpers' as *;
+
+.card {
+    width: 33%;
+    border: solid;
+    height: 600px;
+
+    h5 {
+        color: $BaseColor;
+    }
+
+    img {
+        height: 320px;
+    }
+}

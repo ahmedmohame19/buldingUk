@@ -1,0 +1,55 @@
+@use '../../helpers/helpers' as *;
+
+.About {
+    position: relative;
+
+    .About_Desc {
+
+        p:nth-of-type(2) {
+            width: 900px;
+
+            @include Breakpoints(small) {
+                width: 90%;
+            }
+
+            @include Breakpoints(mobile) {
+                width: 95%;
+            }
+        }
+    }
+
+
+
+    .About_Image {
+        height: 450px;
+        background-image: linear-gradient(to right, #00000081, #00000081), url('../../Assets/images/young-craftsman-building-house.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        --bs-gutter-x: 0 !important;
+        position: relative;
+        z-index: 2;
+        box-shadow: 20px 19px 0px rgba($BaseColor, 0.2);
+
+        // rgba($BaseColor, 0.2)
+
+        >p {
+            font-size: 60px;
+        }
+
+        p:nth-of-type(2) {
+            width: 560px;
+            font-size: 35px;
+        }
+    }
+
+
+}
+
+.About_Titles {
+    border: solid black 1px;
+    position: relative;
+    top: 50px;
+    height: 500px;
+}

@@ -4,7 +4,7 @@ import './Intro.scss'
 export default function Intro() {
     return <div className="landing">
         <div className="back-image">
-            <article>
+            <article className='mt-2'>
                 <span>TRUSTED AKZEE CONTRACTORS</span>
                 <h1>Trusted & Reliable <br />AKZEE CONTRACTORS </h1>
                 <span></span>

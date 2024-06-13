@@ -22,7 +22,7 @@ export default function Navbar({ Scrolled, setScrolled }) {
     }, [Scrolled]);
 
 
-    return <nav className={Scrolled ? "navbar Scrolling px-5" : "navbar px-5"}>
+    return <nav className={Scrolled ? "navbar Scrolling px-4" : "navbar px-3"}>
         <img src={Logo} alt="..." loading='lazy' className='logo' />
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>

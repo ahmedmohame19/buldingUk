@@ -83,4 +83,9 @@ $SecondColor: #d1e8df;
         filter: none !important;
         width: 150px;
     }
+
+    @include Breakpoints(mobile) {
+        width: 100%;
+        left: 0;
+    }
 }
